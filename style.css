@@ -3,6 +3,16 @@
     font-family: Circular;
 }
 
+@font-face {
+    src: url(./assets/fonts/Circular/CircularStd-Light.otf);
+    font-family: CircularLight;
+}
+
+@font-face {
+    font-family: firaSans;
+    src: url(./assets/fonts/Fira_Sans/FiraSans-Black.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -45,17 +55,18 @@
     display: flex;
     list-style-type: none;
     padding-top: 1em;
+    font-family: CircularLight;
 }
 
 .link {
-    margin: 1em;
+    margin: 2.9em .6em 2em .6em;
 }
 
 .link a {
     text-decoration: none;
     color: #e20703;
     transition: color .2s;
-    font-size: 20px;
+    font-size: 15px;
 }
 .link a:hover {
     color: #fd1f1c;
@@ -66,17 +77,79 @@
 /******************************************* CENTRAL ********************************************/
 
 .central {
-    background-image: url(./assets/images/central.jpg);
+    background-image: url(./assets/images/Gragentor_Hoermann_01-e1633393963293.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 100vh;
+    padding: 8em 4em;
+}
+
+.centrarWrapper {
+    width: 75%;
 }
 
 .tituloPrincipal {
-    font-family: Circular;
+    font-family: firaSans;
     font-weight: bolder;
     font-size: 3em;
-    color: black;
+    color: #fd1f1c;
     margin: 20em, 15em;
 }
+
+.slogan {
+    font-family: CircularLight;
+    margin-top: .5em;
+    font-size: 2em;
+    color: #767676;
+}
+.slogan span {
+    font-family: Circular;
+    color: #fd1f1c;
+    font-weight: bold;
+}
+
+.descubrirContainer {
+    display: flex;
+    justify-content: center;
+    padding: .5em 1em;
+    border-radius: 10px;
+    position: relative;
+    top: 4em;
+    background-color: #767676;
+    width: 12em;
+}
+
+.botonDescubrir {
+    font-family: Circular;
+    text-decoration: none;
+    background-color: #767676;
+    width: 10em;
+    height: 3em;
+    text-align: center;
+    padding: .5em 1em;
+    position: relative;
+    top: 8em;
+    display: inline-block;
+    color: #e20703;
+    font-size: 19px;
+    border-radius: 3px;
+    line-height: 2em;
+}
+
+.botonDescubrir i {
+    position: absolute;
+    top: 48%;
+    left: 73%;
+    transform: translate(-50%, -48%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.botonDescubrir:hover i {
+    opacity: 1;
+    transform: translate(-50%, -48%) translateX(10px);
+}
+
+
+
